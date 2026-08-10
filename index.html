@@ -648,7 +648,7 @@ description: "Welcome to Sidiko's TCG Archive."
     </h3>
 
     <p>
-        {{ post.excerpt }}
+        {{ post.excerpt | strip_html | truncatewords: 40 }}
     </p>
 
     <a href="{{ post.url | relative_url }}" class="paper-link">
