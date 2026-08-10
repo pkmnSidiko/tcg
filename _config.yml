@@ -1,0 +1,22 @@
+title: "Sidiko's TCG Archive"
+description: "A scrapbook, field journal, and collection archive for my trading card projects."
+
+markdown: kramdown
+
+collections:
+
+  pokemon:
+    output: true
+    permalink: /pokemon/:name/
+
+  pokedex:
+    output: true
+    permalink: /pokedex/:name/
+
+  artists:
+    output: true
+    permalink: /artists/:name/
+
+  projects:
+    output: true
+    permalink: /projects/:name/
