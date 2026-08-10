@@ -1,6 +1,8 @@
 title: "Sidiko's TCG Archive"
 description: "A scrapbook, field journal, and collection archive for my trading card projects."
 
+baseurl: "/tcg"
+
 markdown: kramdown
 
 collections:
