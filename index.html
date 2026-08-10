@@ -635,7 +635,7 @@ description: "Welcome to Sidiko's TCG Archive."
 
     {% for post in site.posts limit:3 %}
 
-<div class="journal-entry">
+<article class="journal-entry">
 
     <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
         {{ post.date | date: "%B %-d, %Y" }}
@@ -655,7 +655,7 @@ description: "Welcome to Sidiko's TCG Archive."
         Read the full entry →
     </a>
 
-</div>
+</article>
 
 {% endfor %}
 
