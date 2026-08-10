@@ -2,6 +2,7 @@
 layout: post
 title: "Building the Archive"
 description: "Building the new Sidiko TCG Archive."
+excerpt: "The new Sidiko TCG Archive is taking shape! I'm moving my collection projects, binder systems, methodology, and field notes into a proper Jekyll site."
 ---
 
 <p class="section-label">
