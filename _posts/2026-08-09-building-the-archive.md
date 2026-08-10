@@ -22,6 +22,8 @@ description: "Building the new Sidiko TCG Archive."
     Jekyll site.
 </p>
 
+<!--more-->
+
 <p>
     I've been looking for a better way to share what I'm doing
     with my Pokémon TCG collection.
