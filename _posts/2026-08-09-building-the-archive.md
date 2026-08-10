@@ -1,11 +1,17 @@
 ---
 layout: default
 title: "Building the Archive"
-date: 2026-08-09
-categories:
-  - field-notes
-  - website
+description: "Building the new Sidiko TCG Archive."
 ---
+
+## Building the Archive
+
+The new Sidiko TCG Archive is taking shape! I'm moving my collection
+projects, binder systems, methodology, and field notes into a proper
+Jekyll site.
+
+<!--more-->
+
 
 <section class="scrapbook-page">
 
