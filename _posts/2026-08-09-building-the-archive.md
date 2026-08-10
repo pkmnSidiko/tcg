@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Building the Archive"
 description: "Building the new Sidiko TCG Archive."
 ---
