@@ -1,0 +1,5 @@
+---
+layout: default
+title: "Projects"
+description: "Pokémon TCG collection projects, research, experiments, and ongoing hunts."
+---
