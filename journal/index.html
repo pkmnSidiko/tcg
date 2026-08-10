@@ -1,0 +1,53 @@
+---
+layout: default
+title: Field Journal
+description: Collection updates, discoveries, projects, experiments, preservation work, binder reorganizations, and assorted cardboard rabbit holes.
+---
+
+<p class="section-label">
+    Field Journal
+</p>
+
+<h2>
+    Collection Notes
+</h2>
+
+<p>
+    Collection updates, discoveries, projects, experiments,
+    preservation work, binder reorganizations, and assorted
+    cardboard rabbit holes.
+</p>
+
+<div class="journal-list">
+
+{% for post in site.posts %}
+
+<article class="journal-entry">
+
+    <p class="journal-date">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+            {{ post.date | date: "%B %-d, %Y" }}
+        </time>
+    </p>
+
+    <h3>
+        <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+        </a>
+    </h3>
+
+    <div class="journal-content">
+        {{ post.content }}
+    </div>
+
+</article>
+
+{% else %}
+
+<p>
+    The Field Journal is waiting for its first entry.
+</p>
+
+{% endfor %}
+
+</div>
