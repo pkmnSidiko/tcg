@@ -74,20 +74,6 @@ excerpt: "The new Sidiko TCG Archive is taking shape! I'm moving my collection p
     archive that happen to live on the internet.
 </p>
 
-<div class="handwritten-note">
-
-    <span>Current status:</span>
-
-    <br>
-
-    Very much under construction.
-
-    <br><br>
-
-    Please excuse the cardboard dust.
-
-</div>
-
 <h3>
     What's Coming
 </h3>
