@@ -633,10 +633,36 @@ description: "Welcome to Sidiko's TCG Archive."
         experiments, and assorted cardboard rabbit holes.
     </p>
 
-    <p>
-        <a href="#" class="paper-link">
-            Field Journal coming soon →
+    {% for post in site.posts limit:3 %}
+
+<article class="journal-entry">
+
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+        {{ post.date | date: "%B %-d, %Y" }}
+    </time>
+
+    <h3>
+        <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
         </a>
+    </h3>
+
+    <p>
+        {{ post.excerpt }}
     </p>
+
+    <a href="{{ post.url | relative_url }}" class="paper-link">
+        Read the full entry →
+    </a>
+
+</article>
+
+{% endfor %}
+
+    <p>
+    <a href="{{ '/journal/' | relative_url }}" class="paper-link">
+        Browse the Field Journal →
+    </a>
+</p>
 
 </section>
