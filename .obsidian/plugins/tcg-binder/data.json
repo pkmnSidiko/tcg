@@ -1,9 +1,0 @@
-{
-  "rootFolder": "TCG Binder",
-  "dataSource": "tcgdex",
-  "cardLanguage": "en",
-  "defaultViewMode": "list",
-  "dashboardLayout": "list",
-  "pokemonTcgApiKey": "",
-  "allocationModelVersion": 1
-}
