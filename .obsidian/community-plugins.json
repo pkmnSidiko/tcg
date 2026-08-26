@@ -5,5 +5,6 @@
   "obsidian-csv-table",
   "obsidian-icon-shortcodes",
   "calendar",
-  "obsidian-importer"
+  "obsidian-importer",
+  "dataview"
 ]
