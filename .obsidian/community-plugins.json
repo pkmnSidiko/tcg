@@ -1,5 +1,8 @@
 [
   "obsidian-style-settings",
   "buttons",
-  "github-sync"
+  "github-sync",
+  "obsidian-csv-table",
+  "obsidian-icon-shortcodes",
+  "calendar"
 ]
