@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Yuka Morii"
-description: "Sidiko's Yuka Morii Pokémon TCG artist collection."
+title: Yuka Morii
+description: Sidiko's Yuka Morii Pokémon TCG artist collection.
 ---
 
 <section class="scrapbook-page">

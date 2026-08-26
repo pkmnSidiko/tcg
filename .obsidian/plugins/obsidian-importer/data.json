@@ -1,0 +1,23 @@
+{
+  "secrets": {},
+  "outputLocations": {},
+  "outputSettings": {
+    "csv": {
+      "folder": "data/tcg/yuka morii",
+      "attachments": {
+        "mode": "subfolder",
+        "path": "data/tcg/yuka morii/images"
+      },
+      "duplicates": "update",
+      "saveSourceId": true,
+      "template": "",
+      "inlineTemplate": "---\nCard Name: {{source[\"Card Name\"] | yaml}}\nSet: {{source[\"Set\"] | yaml}}\nCard: {{source[\"Card #\"] | yaml}}\nRarity: {{source[\"Rarity\"] | yaml}}\nFoil: {{source[\"Foil\"] | yaml}}\nOwned: {{source[\"Owned\"] | yaml}}\nCondition: {{source[\"Condition\"] | yaml}}\nPurchase Price: {{source[\"Purchase Price\"] | yaml}}\nNotes: {{source[\"Notes\"] | yaml}}\n---\n",
+      "titleTemplate": "{{title}}"
+    }
+  },
+  "onenoteAttachments": {},
+  "sourceFolders": {
+    "csv": "/Users/tequilacorbly/Downloads"
+  },
+  "lastSourceFolder": "/Users/tequilacorbly/Downloads"
+}
