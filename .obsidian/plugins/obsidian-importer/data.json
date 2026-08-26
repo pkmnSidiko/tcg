@@ -6,7 +6,7 @@
       "folder": "data/tcg/yuka morii",
       "attachments": {
         "mode": "subfolder",
-        "path": "data/tcg/yuka morii/images"
+        "path": "data/tcg/yuka morii/cards"
       },
       "duplicates": "update",
       "saveSourceId": true,
