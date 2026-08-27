@@ -2,110 +2,116 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
-        {% if page.title %}
-            {{ page.title }} ·
-        {% endif %}
-        {{ site.title }}
+        {% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}
     </title>
 
-    <meta
-        name="description"
-        content="{{ page.description | default: site.description }}"
-    >
+    <meta name="description" content="{{ page.description | default: site.description }}">
 
-    <link
-        rel="stylesheet"
-        href="{{ '/assets/css/style.css' | relative_url }}"
-    >
-
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
+<body id="top">
 
-<body>
+<div class="site-shell">
 
-<header class="site-header">
-
-    <div class="header-tape"></div>
-
-    <div class="site-title">
-
-        <p class="eyebrow">
-            Pokémon TCG • Collection Archive
-        </p>
-
-        <h1>
-            <a href="{{ '/' | relative_url }}">
-                {{ site.title }}
+    <header class="site-header">
+        <div class="site-brand">
+            <a href="{{ '/' | relative_url }}" class="site-title">
+                <span class="site-title-main">Sidiko's TCG Archive</span>
+                <span class="site-title-sub">Pokémon Trading Card Collection Database</span>
             </a>
-        </h1>
+        </div>
 
-        <p class="subtitle">
-            A collector's field notes, projects, binders,
-            and cardboard rabbit holes.
-        </p>
+        <div class="header-status" aria-label="Archive status">
+            <span class="status-light"></span>
+            <span>ARCHIVE ONLINE</span>
+        </div>
+    </header>
+
+    <div class="site-body">
+
+        <aside class="explorer" aria-label="Archive Explorer">
+            <div class="panel-title">✦ EXPLORER ✦</div>
+
+            <nav class="explorer-nav">
+                <a class="nav-pink" href="{{ '/' | relative_url }}">
+                    <span>⌂</span> Home
+                </a>
+                <a class="nav-orange" href="{{ '/collections/' | relative_url }}">
+                    <span>▣</span> Collections
+                </a>
+                <a class="nav-yellow" href="{{ '/pokemon/' | relative_url }}">
+                    <span>✦</span> Pokémon
+                </a>
+                <a class="nav-green" href="{{ '/pokedex/' | relative_url }}">
+                    <span>◈</span> Pokédex
+                </a>
+                <a class="nav-cyan" href="{{ '/artists/' | relative_url }}">
+                    <span>✎</span> Artists
+                </a>
+                <a class="nav-blue" href="{{ '/binders/' | relative_url }}">
+                    <span>▤</span> Binders
+                </a>
+                <a class="nav-purple" href="{{ '/methodology/' | relative_url }}">
+                    <span>✧</span> How I Collect
+                </a>
+                <a class="nav-lilac" href="{{ '/projects/' | relative_url }}">
+                    <span>⚙</span> Projects
+                </a>
+                <a class="nav-pink" href="{{ '/journal/' | relative_url }}">
+                    <span>✉</span> Field Journal
+                </a>
+            </nav>
+
+            <div class="explorer-divider"></div>
+
+            <div class="side-panel">
+                <div class="side-panel-title">ARCHIVE NOTES</div>
+                <p>Collection data, binder systems, research projects, and assorted cardboard rabbit holes.</p>
+            </div>
+
+            <div class="side-panel mini-status">
+                <div class="side-panel-title">SYSTEM</div>
+                <p><strong>STATUS:</strong> collecting</p>
+                <p><strong>VERSION:</strong> 2026.x</p>
+                <p><strong>TRAINER:</strong> Sidiko</p>
+            </div>
+        </aside>
+
+        <main class="content-window">
+            <div class="content-titlebar">
+                <span class="window-path">/ {{ page.title | default: 'Home' }}</span>
+                <span class="window-controls" aria-hidden="true">− □ ×</span>
+            </div>
+
+            <div class="content-area">
+                {{ content }}
+            </div>
+        </main>
 
     </div>
 
+    <footer class="site-footer">
+        <div class="footer-bar">
+            <span>SIDIKO'S TCG ARCHIVE</span>
+            <span>Pokémon Archivist / Research Trainer</span>
+            <a href="#top">↑ TOP</a>
+        </div>
 
-    <nav class="main-nav" aria-label="Main navigation">
+        <p>
+            Website contents, information, presentation &copy;Copyright Sidiko 2026+
+            • Official Pokémon Art &copy;Copyright Game Freak, The Pokémon Company, and Nintendo 1996+
+        </p>
+        <p class="footer-small">
+            Collection data maintained separately from this public archive.
+        </p>
+    </footer>
 
-        <a href="{{ '/' | relative_url }}">
-            Home
-        </a>
-
-        <a href="{{ '/collections/' | relative_url }}">
-            Collections
-        </a>
-
-        <a href="{{ '/binders/' | relative_url }}">
-            Binders
-        </a>
-
-        <a href="{{ '/methodology/' | relative_url }}">
-            How I Collect
-        </a>
-
-        <a href="{{ '/projects/' | relative_url }}">
-            Projects
-        </a>
-
-        <a href="{{ '/journal/' | relative_url }}">
-            Field Journal
-        </a>
-
-    </nav>
-
-</header>
-
-
-<main>
-
-    {{ content }}
-
-</main>
-
-
-<footer class="site-footer">
-
-    <p>
-        Website contents, information, presentation &copy;Copyright Sidiko 2026+ • Official Pokemon Art &copy;Copyright GameFreak, The Pokemon Company, and Nintendo 1996+ • Pokémon Archivist / Research Trainer
-    </p>
-
-    <p class="footer-small">
-        Collection data maintained separately from this public archive. <a href="#top">Return to Top of Page</a>
-    </p>
-
-</footer>
+</div>
 
 </body>
-
 </html>
