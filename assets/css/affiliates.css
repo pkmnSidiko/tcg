@@ -1,0 +1,111 @@
+/* ---------------------------------------------------------
+   AFFILIATES
+   Retro 88x31 button wall
+   --------------------------------------------------------- */
+
+.affiliates-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.archive-page-header {
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--line);
+}
+
+.archive-page-header h1 {
+    margin: 2px 0 6px;
+}
+
+.archive-page-header p:last-child,
+.affiliate-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.affiliate-intro {
+    margin-bottom: 30px;
+}
+
+.affiliate-box {
+    position: relative;
+    margin: 0 0 32px;
+    padding: 28px 22px 22px;
+    background: var(--panel-soft);
+    border: 2px solid var(--line);
+    box-shadow: var(--shadow-raised);
+}
+
+.affiliate-box-heading {
+    position: absolute;
+    top: -12px;
+    left: 16px;
+    padding: 3px 10px;
+    background: var(--blue-light);
+    border: 2px solid var(--line);
+    color: var(--purple-deep);
+    font-family: var(--font-pixel);
+    font-size: 0.72rem;
+    font-weight: bold;
+}
+
+.affiliate-button-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.affiliate-button-card > a {
+    flex: 0 0 88px;
+}
+
+.affiliate-button-card img {
+    display: block;
+    width: 88px;
+    height: 31px;
+}
+
+.affiliate-button-card p {
+    flex: 1 1 260px;
+    margin: 2px 0 0;
+}
+
+.affiliate-button-card label {
+    flex: 0 0 100%;
+    margin-top: 4px;
+    font-family: var(--font-pixel);
+    font-size: 0.72rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.affiliate-code {
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: 72px;
+    padding: 8px;
+    resize: vertical;
+    background: #fff;
+    border: 2px inset var(--line);
+    color: var(--ink);
+    font-family: var(--font-pixel);
+    font-size: 0.72rem;
+    line-height: 1.45;
+}
+
+.affiliate-placeholder {
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .affiliate-box {
+        padding: 26px 14px 18px;
+    }
+
+    .affiliate-button-card {
+        gap: 12px;
+    }
+}
