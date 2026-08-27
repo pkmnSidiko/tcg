@@ -618,80 +618,55 @@ description: "Welcome to Sidiko's TCG Archive."
 </section>
 
 
-<section id="journal" class="scrapbook-page journal">
+<section id="journal" class="section">
 
-    <p class="section-label">
-        Field Journal
-    </p>
+    <div class="section-heading">
 
-    <h2>
-        Latest Notes
-    </h2>
+        <p class="section-label">
+            Site Updates
+        </p>
 
-    <p>
-        Collection updates, discoveries, projects,
-        experiments, and assorted cardboard rabbit holes.
-    </p>
+        <h2>
+            Update Log
+        </h2>
 
-    {% for post in site.posts limit:3 %}
+        <p>
+            What's new around the archive, from collection updates
+            and discoveries to projects, experiments, and assorted
+            cardboard rabbit holes.
+        </p>
 
-<article class="journal-entry">
+    </div>
 
-    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
-        {{ post.date | date: "%B %-d, %Y" }}
-    </time>
+    {% for post in site.posts limit:5 %}
 
-    <h3>
-        <a href="{{ post.url | relative_url }}">
-            {{ post.title }}
+    <article class="journal-entry">
+
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+            {{ post.date | date: "%B %-d, %Y" }}
+        </time>
+
+        <h3>
+            <a href="{{ post.url | relative_url }}">
+                {{ post.title }}
+            </a>
+        </h3>
+
+        <p>
+            {{ post.description }}
+        </p>
+
+        <a href="{{ post.url | relative_url }}" class="paper-link">
+            Read the full update →
         </a>
-    </h3>
 
-   <p>
-    {{ post.description }}
-</p>
+    </article>
 
-    <a href="{{ post.url | relative_url }}" class="paper-link">
-        Read the full entry →
-    </a>
-
-</article>
-
-{% endfor %}
+    {% endfor %}
 
     <p>
-    <a href="{{ '/journal/' | relative_url }}" class="paper-link">
-        Browse the Field Journal →
-    </a>
-</p>
-
-</section>
-
-<section class="support">
-
-    <p class="section-label">
-        Support the Archive
-    </p>
-
-    <h2>
-        Help Keep the Archive Growing
-    </h2>
-
-    <p>
-        If you enjoy the Sidiko TCG Archive and would like to
-        support its continued development, you can find me on
-        GitHub Sponsors or Ko-fi.
-    </p>
-
-    <p>
-        <a href="https://github.com/sponsors/pkmnSidiko" class="paper-link">
-            GitHub Sponsors →
-        </a>
-    </p>
-
-    <p>
-        <a href="https://www.ko-fi.com/pkmnsidiko" target="_new" class="paper-link">
-            Ko-fi →
+        <a href="{{ '/journal/' | relative_url }}" class="paper-link">
+            Browse the complete update log →
         </a>
     </p>
 
