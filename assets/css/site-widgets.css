@@ -19,3 +19,44 @@
 .hit-counter script {
     max-width: 100%;
 }
+
+/* Old-web style site/support buttons */
+.side-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.side-link-list a {
+    display: block;
+    padding: 5px 7px;
+    border: 1px solid var(--border-dark, #6b4b75);
+    border-top-color: var(--border-light, #ffffff);
+    border-left-color: var(--border-light, #ffffff);
+    background: var(--panel-bg, #ffffff);
+    color: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 0 var(--border-dark, #6b4b75);
+    transition: transform 0.05s ease, box-shadow 0.05s ease, background 0.05s ease;
+}
+
+.side-link-list a:hover,
+.side-link-list a:focus-visible {
+    background: var(--accent-soft, #f2e8f7);
+    text-decoration: underline;
+    outline: none;
+}
+
+.side-link-list a:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 var(--border-dark, #6b4b75);
+    border-top-color: var(--border-dark, #6b4b75);
+    border-left-color: var(--border-dark, #6b4b75);
+    border-right-color: var(--border-light, #ffffff);
+    border-bottom-color: var(--border-light, #ffffff);
+}
