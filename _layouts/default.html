@@ -12,6 +12,9 @@
     {% if page.url contains '/affiliates/' %}
     <link rel="stylesheet" href="{{ '/assets/css/affiliates.css' | relative_url }}">
     {% endif %}
+    {% if page.url contains '/links' %}
+    <link rel="stylesheet" href="{{ '/assets/css/links.css' | relative_url }}">
+    {% endif %}
 </head>
 <body id="top">
 <div class="site-shell">
@@ -93,6 +96,7 @@
                 <nav class="side-link-list" aria-label="Site links">
                     <a href="https://github.com/pkmnSidiko/tcg/issues/1">📖 Guestbook</a>
                     <a href="{{ '/affiliates/' | relative_url }}">🔗 Affiliates</a>
+                    <a href="{{ '/links.html' | relative_url }}">✦ Links &amp; Resources</a>
                 </nav>
             </div>
 
