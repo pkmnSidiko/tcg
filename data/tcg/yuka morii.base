@@ -1,0 +1,21 @@
+filters: file.folder == "data/tcg/yuka morii"
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - Card Name
+      - Set
+      - Card Number
+      - Rarity
+      - Foil
+      - Owned
+      - Condition
+      - Quantity
+      - Market Value
+      - Purchase Price
+      - Target Buy Price
+      - GainLoss
+      - Notes
+      - Artist
+      - Language
