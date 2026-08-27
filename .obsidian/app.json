@@ -1,5 +1,6 @@
 {
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
-  "openBehavior": "daily"
+  "openBehavior": "daily",
+  "promptDelete": false
 }

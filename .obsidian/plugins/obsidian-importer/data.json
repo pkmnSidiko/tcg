@@ -3,10 +3,10 @@
   "outputLocations": {},
   "outputSettings": {
     "csv": {
-      "folder": "data/tcg/yuka morii",
+      "folder": "data/tcg/absol",
       "attachments": {
         "mode": "subfolder",
-        "path": "data/tcg/yuka morii/cards"
+        "path": "data/tcg/absol/cards"
       },
       "duplicates": "update",
       "saveSourceId": true,
