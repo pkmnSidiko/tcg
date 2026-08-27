@@ -25,19 +25,24 @@ description: "Welcome to Sidiko's TCG Archive."
         <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
             {{ post.date | date: "%B %-d, %Y" }}
         </time>
-        <h3>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h3>
-        {% if post.description %}
-        <p>{{ post.description }}</p>
-        {% endif %}
-        <a href="{{ post.url | relative_url }}" class="paper-link">Read the full update →</a>
+
+        <div class="update-entry-content">
+            <h3>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+
+            {% if post.description %}
+            <p>{{ post.description }}</p>
+            {% endif %}
+        </div>
+
+        <a href="{{ post.url | relative_url }}" class="update-entry-link">READ UPDATE &gt;</a>
     </article>
     {% endfor %}
 
-    <p>
-        <a href="{{ '/journal/' | relative_url }}" class="paper-link">
-            Browse the complete update log →
+    <p class="update-log-more">
+        <a href="{{ '/journal/' | relative_url }}" class="retro-site-button">
+            BROWSE COMPLETE UPDATE LOG &gt;
         </a>
     </p>
 </section>
