@@ -15,6 +15,9 @@
     {% if page.url contains '/links' %}
     <link rel="stylesheet" href="{{ '/assets/css/links.css' | relative_url }}">
     {% endif %}
+    {% if page.url contains '/methodology/' %}
+    <link rel="stylesheet" href="{{ '/assets/css/methodology.css' | relative_url }}">
+    {% endif %}
 </head>
 <body id="top">
 <div class="site-shell">
@@ -143,5 +146,8 @@
         </div>
     </footer>
 </div>
+{% if page.url contains '/methodology/' %}
+<script src="{{ '/assets/js/methodology.js' | relative_url }}"></script>
+{% endif %}
 </body>
 </html>
