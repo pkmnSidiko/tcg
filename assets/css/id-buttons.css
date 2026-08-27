@@ -1,0 +1,43 @@
+/* ---------------------------------------------------------
+   SIDIKO'S ID / INTEREST BUTTONS
+   Personal-web / Flight Rising-style badge collection
+   --------------------------------------------------------- */
+
+.id-button-panel {
+    text-align: center;
+}
+
+.id-button-group {
+    margin: 9px 0 0;
+}
+
+.id-button-label {
+    margin: 0 0 5px;
+    color: var(--purple-deep);
+    font-family: var(--font-pixel);
+    font-size: 0.58rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.id-button-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.id-button {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 760px) {
+    .id-button-list {
+        justify-content: flex-start;
+    }
+}

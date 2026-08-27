@@ -1,111 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        {% if page.title %}
-            {{ page.title }} ·
-        {% endif %}
-        {{ site.title }}
-    </title>
-
-    <meta
-        name="description"
-        content="{{ page.description | default: site.description }}"
-    >
-
-    <link
-        rel="stylesheet"
-        href="{{ '/assets/css/style.css' | relative_url }}"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/id-buttons.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/site-widgets.css' | relative_url }}">
 </head>
-
-
-<body>
-
-<header class="site-header">
-
-    <div class="header-tape"></div>
-
-    <div class="site-title">
-
-        <p class="eyebrow">
-            Pokémon TCG • Collection Archive
-        </p>
-
-        <h1>
-            <a href="{{ '/' | relative_url }}">
-                {{ site.title }}
+<body id="top">
+<div class="site-shell">
+    <header class="site-header">
+        <div class="site-brand">
+            <a href="{{ '/' | relative_url }}" class="site-title">
+                <span class="site-title-main">Sidiko's TCG Archive</span>
+                <span class="site-title-sub">Pokémon Trading Card Collection Database</span>
             </a>
-        </h1>
+        </div>
+        <div class="header-status" aria-label="Archive status">
+            <span class="status-light"></span>
+            <span>ARCHIVE ONLINE</span>
+        </div>
+    </header>
 
-        <p class="subtitle">
-            A collector's field notes, projects, binders,
-            and cardboard rabbit holes.
-        </p>
+    <div class="site-body">
+        <aside class="explorer" aria-label="Archive Explorer">
+            <div class="panel-title">✦ EXPLORER ✦</div>
+            <nav class="explorer-nav">
+                <a class="nav-pink" href="{{ '/' | relative_url }}"><span>⌂</span> Home</a>
+                <a class="nav-orange" href="{{ '/collections/' | relative_url }}"><span>▣</span> Collections</a>
+                <a class="nav-yellow" href="{{ '/pokemon/' | relative_url }}"><span>✦</span> Pokémon</a>
+                <a class="nav-green" href="{{ '/pokedex/' | relative_url }}"><span>◈</span> Pokédex</a>
+                <a class="nav-cyan" href="{{ '/artists/' | relative_url }}"><span>✎</span> Artists</a>
+                <a class="nav-blue" href="{{ '/binders/' | relative_url }}"><span>▤</span> Binders</a>
+                <a class="nav-purple" href="{{ '/methodology/' | relative_url }}"><span>✧</span> How I Collect</a>
+                <a class="nav-lilac" href="{{ '/projects/' | relative_url }}"><span>⚙</span> Projects</a>
+                <a class="nav-pink" href="{{ '/journal/' | relative_url }}"><span>✉</span> Field Journal</a>
+            </nav>
 
+            <div class="explorer-divider"></div>
+
+            <div class="side-panel id-button-panel">
+                <div class="side-panel-title">✦ ABOUT SIDIKO ✦</div>
+                <div class="id-button-group">
+                    <div class="id-button-label">Identity</div>
+                    <div class="id-button-list">
+                        <img class="id-button" src="https://i.imgur.com/TO5f5vS.png" alt="She/Her" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.imgur.com/H0t7Ypl.png" alt="Demisexual" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.imgur.com/LCqISMP.png" alt="Panromantic" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.imgur.com/Ik9ZGoP.png" alt="PFLAG" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="id-button-group">
+                    <div class="id-button-label">Accessibility &amp; Health</div>
+                    <div class="id-button-list">
+                        <img class="id-button" src="https://i.imgur.com/AaYNmEX.png" alt="Disabled" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.ibb.co/hRVx555X/Crutch-User-handicap.png" alt="Crutch User" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.ibb.co/HfJT0t8j/Walker-User-handicap.png" alt="Walker User" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.ibb.co/7T4MhSL/Allergies.png" alt="Allergies" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.ibb.co/jvxkL5r0/Chronic-Pain.png" alt="Chronic Pain" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.ibb.co/BVqt1Rnq/Chronic-Fatigue.png" alt="Chronic Fatigue" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.ibb.co/HftTV3DX/Dysautonomia.png" alt="Dysautonomia" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.imgur.com/gUe2de3.png" alt="ADHD" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="id-button-group">
+                    <div class="id-button-label">A Little About Me</div>
+                    <div class="id-button-list">
+                        <img class="id-button" src="https://i.imgur.com/3adgzZD.png" alt="Aquarius" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.imgur.com/AtFksDk.png" alt="INFP" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.imgur.com/8PVSWJo.png" alt="Halloween" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="id-button-group">
+                    <div class="id-button-label">Pokémon</div>
+                    <div class="id-button-list">
+                        <img class="id-button" src="https://i.ibb.co/4ZP8LP94/Pokemon.png" alt="Pokémon" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.ibb.co/0yPS3Yqt/Dark-Type.png" alt="Dark Type" loading="lazy" decoding="async">
+                        <img class="id-button" src="https://i.ibb.co/XZHbp2c8/Ghost-Type.png" alt="Ghost Type" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+
+            <div class="side-panel site-widget-panel">
+                <div class="side-panel-title">✦ ARCHIVE VISITORS ✦</div>
+                <div class="hit-counter" aria-label="Archive visitor counter">
+                    <script type="text/javascript" src="https://pub16.bravenet.com/counter/code.php?id=406812&amp;usernum=1322014770&amp;cpv=3"></script>
+                </div>
+            </div>
+
+            <div class="side-panel">
+                <div class="side-panel-title">✦ SITE LINKS ✦</div>
+                <nav class="side-link-list" aria-label="Site links">
+                    <a href="https://github.com/pkmnSidiko/tcg/issues/1">📖 Guestbook</a>
+                    <a href="{{ '/affiliates/' | relative_url }}">🔗 Affiliates</a>
+                </nav>
+            </div>
+
+            <div class="side-panel">
+                <div class="side-panel-title">✦ SUPPORT ✦</div>
+                <nav class="side-link-list" aria-label="Support links">
+                    <a href="https://github.com/sponsors/pkmnSidiko">GitHub Sponsors →</a>
+                    <a href="https://www.ko-fi.com/pkmnsidiko" target="_blank" rel="noopener">Ko-fi →</a>
+                </nav>
+            </div>
+
+            <div class="side-panel">
+                <div class="side-panel-title">ARCHIVE NOTES</div>
+                <p>Collection data, binder systems, research projects, and assorted cardboard rabbit holes.</p>
+            </div>
+            <div class="side-panel mini-status">
+                <div class="side-panel-title">SYSTEM</div>
+                <p><strong>STATUS:</strong> collecting</p>
+                <p><strong>VERSION:</strong> 2026.x</p>
+                <p><strong>TRAINER:</strong> Sidiko</p>
+            </div>
+        </aside>
+
+        <main class="content-window">
+            <div class="content-titlebar">
+                <span class="window-path">/ {{ page.title | default: 'Home' }}</span>
+                <span class="window-controls" aria-hidden="true">− □ ×</span>
+            </div>
+            <div class="content-area">
+                {{ content }}
+            </div>
+        </main>
     </div>
 
-
-    <nav class="main-nav" aria-label="Main navigation">
-
-        <a href="{{ '/' | relative_url }}">
-            Home
-        </a>
-
-        <a href="{{ '/collections/' | relative_url }}">
-            Collections
-        </a>
-
-        <a href="{{ '/binders/' | relative_url }}">
-            Binders
-        </a>
-
-        <a href="{{ '/methodology/' | relative_url }}">
-            How I Collect
-        </a>
-
-        <a href="{{ '/projects/' | relative_url }}">
-            Projects
-        </a>
-
-        <a href="{{ '/journal/' | relative_url }}">
-            Field Journal
-        </a>
-
-    </nav>
-
-</header>
-
-
-<main>
-
-    {{ content }}
-
-</main>
-
-
-<footer class="site-footer">
-
-    <p>
-        Website contents, information, presentation &copy;Copyright Sidiko 2026+ • Official Pokemon Art &copy;Copyright GameFreak, The Pokemon Company, and Nintendo 1996+ • Pokémon Archivist / Research Trainer
-    </p>
-
-    <p class="footer-small">
-        Collection data maintained separately from this public archive. <a href="#top">Return to Top of Page</a>
-    </p>
-
-</footer>
-
+    <footer class="site-footer">
+        <div class="footer-bar">
+            <span>SIDIKO'S TCG ARCHIVE</span>
+            <span>Pokémon Archivist / Research Trainer</span>
+            <span>Website contents, information &amp; presentation &copy; Sidiko 2026+</span>
+            <span>Official Pokémon Art &copy; Game Freak, The Pokémon Company, and Nintendo 1996+</span>
+            <a href="{{ '/' | relative_url }}">⌂ HOME</a>
+            <a href="{{ '/' | relative_url }}" onclick="if (history.length > 1) { history.back(); return false; }">← BACK</a>
+            <a href="#top">↑ TOP</a>
+        </div>
+    </footer>
+</div>
 </body>
-
 </html>
