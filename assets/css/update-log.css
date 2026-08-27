@@ -3,6 +3,19 @@
    Boxy early-web notices with floating border links
    --------------------------------------------------------- */
 
+/* Under-construction notice */
+.handwritten-note {
+    overflow: auto;
+}
+
+.construction-pikachu {
+    float: left;
+    width: 180px;
+    max-width: 42%;
+    height: auto;
+    margin: 0 18px 10px 0;
+}
+
 .update-log {
     padding-top: 8px;
 }
@@ -96,6 +109,12 @@
 }
 
 @media (max-width: 600px) {
+    .construction-pikachu {
+        width: 140px;
+        max-width: 45%;
+        margin-right: 14px;
+    }
+
     .update-entry {
         padding: 28px 16px 34px;
     }
