@@ -2,8 +2,42 @@
 layout: default
 ---
 
-<article class="scrapbook-page journal journal-post">
+<article class="update-post">
 
-    {{ content }}
+    <header class="update-post-header">
+        <p class="section-label">Site Update</p>
+
+        <h1>{{ page.title }}</h1>
+
+        <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+            {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+    </header>
+
+    <div class="update-post-content">
+        {{ content }}
+    </div>
+
+    <nav class="update-post-nav" aria-label="Update navigation">
+        {% if page.previous.url %}
+        <a href="{{ page.previous.url | relative_url }}" class="retro-site-button">
+            ← OLDER UPDATE
+        </a>
+        {% else %}
+        <span></span>
+        {% endif %}
+
+        <a href="{{ '/#updates' | relative_url }}" class="retro-site-button">
+            ↑ UPDATE LOG
+        </a>
+
+        {% if page.next.url %}
+        <a href="{{ page.next.url | relative_url }}" class="retro-site-button">
+            NEWER UPDATE →
+        </a>
+        {% else %}
+        <span></span>
+        {% endif %}
+    </nav>
 
 </article>
