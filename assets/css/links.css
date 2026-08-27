@@ -1,0 +1,87 @@
+/* ---------------------------------------------------------
+   LINKS & RESOURCES
+   Early-web resource directory styling
+   --------------------------------------------------------- */
+
+.links-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-heading {
+    margin-bottom: 28px;
+}
+
+.page-heading h1 {
+    margin-bottom: 10px;
+}
+
+.link-box {
+    position: relative;
+    margin: 0 0 28px;
+    padding: 26px 20px 20px;
+    background: var(--panel);
+    border: 2px solid var(--line);
+    box-shadow: var(--shadow-raised);
+}
+
+.link-box h2 {
+    margin: -12px 0 14px;
+    display: inline-block;
+    padding: 3px 9px;
+    background: var(--blue-light);
+    border: 2px solid var(--line);
+    color: var(--purple-deep);
+    font-family: var(--font-pixel);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+}
+
+.link-list {
+    padding: 4px 8px;
+}
+
+.link-placeholder {
+    margin: 0;
+    color: var(--muted);
+    font-family: var(--font-pixel);
+    font-size: 0.72rem;
+}
+
+.resource-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 14px;
+}
+
+.resource-tags span {
+    padding: 4px 7px;
+    background: var(--pink-light);
+    border: 1px solid #c887a7;
+    color: #80526b;
+    font-family: var(--font-pixel);
+    font-size: 0.62rem;
+    font-weight: bold;
+}
+
+.links-note {
+    margin: 34px auto 8px;
+    padding: 10px 12px;
+    background: var(--yellow-light);
+    border: 1px dashed #c4aa58;
+    color: #74622d;
+    font-family: var(--font-pixel);
+    font-size: 0.68rem;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .link-box {
+        padding: 24px 14px 16px;
+    }
+
+    .resource-tags {
+        gap: 5px;
+    }
+}

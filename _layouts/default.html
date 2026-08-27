@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/id-buttons.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/site-widgets.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/update-log.css' | relative_url }}">
+    {% if page.url contains '/affiliates/' %}
+    <link rel="stylesheet" href="{{ '/assets/css/affiliates.css' | relative_url }}">
+    {% endif %}
+    {% if page.url contains '/links' %}
+    <link rel="stylesheet" href="{{ '/assets/css/links.css' | relative_url }}">
+    {% endif %}
+    {% if page.url contains '/methodology/' %}
+    <link rel="stylesheet" href="{{ '/assets/css/methodology.css' | relative_url }}">
+    {% endif %}
 </head>
 <body id="top">
 <div class="site-shell">
@@ -29,14 +39,8 @@
             <div class="panel-title">✦ EXPLORER ✦</div>
             <nav class="explorer-nav">
                 <a class="nav-pink" href="{{ '/' | relative_url }}"><span>⌂</span> Home</a>
-                <a class="nav-orange" href="{{ '/collections/' | relative_url }}"><span>▣</span> Collections</a>
-                <a class="nav-yellow" href="{{ '/pokemon/' | relative_url }}"><span>✦</span> Pokémon</a>
-                <a class="nav-green" href="{{ '/pokedex/' | relative_url }}"><span>◈</span> Pokédex</a>
-                <a class="nav-cyan" href="{{ '/artists/' | relative_url }}"><span>✎</span> Artists</a>
-                <a class="nav-blue" href="{{ '/binders/' | relative_url }}"><span>▤</span> Binders</a>
                 <a class="nav-purple" href="{{ '/methodology/' | relative_url }}"><span>✧</span> How I Collect</a>
-                <a class="nav-lilac" href="{{ '/projects/' | relative_url }}"><span>⚙</span> Projects</a>
-                <a class="nav-pink" href="{{ '/journal/' | relative_url }}"><span>✉</span> Field Journal</a>
+                <a class="nav-blue" href="{{ '/binders/' | relative_url }}"><span>▤</span> Binders</a>
             </nav>
 
             <div class="explorer-divider"></div>
@@ -95,6 +99,7 @@
                 <nav class="side-link-list" aria-label="Site links">
                     <a href="https://github.com/pkmnSidiko/tcg/issues/1">📖 Guestbook</a>
                     <a href="{{ '/affiliates/' | relative_url }}">🔗 Affiliates</a>
+                    <a href="{{ '/links.html' | relative_url }}">✦ Links &amp; Resources</a>
                 </nav>
             </div>
 
@@ -141,5 +146,8 @@
         </div>
     </footer>
 </div>
+{% if page.url contains '/methodology/' %}
+<script src="{{ '/assets/js/methodology.js' | relative_url }}"></script>
+{% endif %}
 </body>
 </html>

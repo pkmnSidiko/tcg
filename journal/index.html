@@ -1,53 +1,39 @@
 ---
 layout: default
-title: Field Journal
-description: Collection updates, discoveries, projects, experiments, preservation work, binder reorganizations, and assorted cardboard rabbit holes.
+title: Update Log
+description: Site updates, archive progress, discoveries, and assorted cardboard rabbit holes.
 ---
 
-<p class="section-label">
-    Field Journal
-</p>
+<section class="update-log-page">
+    <header class="page-heading">
+        <p class="section-label">Site Updates</p>
+        <h1>Update Log</h1>
+        <p>News, changes, discoveries, and assorted archive progress.</p>
+    </header>
 
-<h2>
-    Collection Notes
-</h2>
+    <div class="update-log">
+        {% for post in site.posts %}
+        <article class="update-entry">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+                {{ post.date | date: "%B %-d, %Y" }}
+            </time>
 
-<p>
-    Collection updates, discoveries, projects, experiments,
-    preservation work, binder reorganizations, and assorted
-    cardboard rabbit holes.
-</p>
+            <div class="update-entry-content">
+                <h2>
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
 
-<div class="journal-list">
+                {% if post.description %}
+                <p>{{ post.description }}</p>
+                {% else %}
+                <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                {% endif %}
+            </div>
 
-{% for post in site.posts %}
-
-<article class="journal-entry">
-
-    <p class="journal-date">
-        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
-            {{ post.date | date: "%B %-d, %Y" }}
-        </time>
-    </p>
-
-    <h3>
-        <a href="{{ post.url | relative_url }}">
-            {{ post.title }}
-        </a>
-    </h3>
-
-    <div class="journal-content">
-        {{ post.content }}
+            <a href="{{ post.url | relative_url }}" class="update-entry-link">READ UPDATE &gt;</a>
+        </article>
+        {% else %}
+        <p class="links-note">The update log is waiting for its first entry.</p>
+        {% endfor %}
     </div>
-
-</article>
-
-{% else %}
-
-<p>
-    The Field Journal is waiting for its first entry.
-</p>
-
-{% endfor %}
-
-</div>
+</section>

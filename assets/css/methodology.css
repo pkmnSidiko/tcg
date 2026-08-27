@@ -1,0 +1,111 @@
+/* ---------------------------------------------------------
+   METHODOLOGY PAGE
+   Boxed archive sections with early-web border tabs
+   --------------------------------------------------------- */
+
+.methodology-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.methodology-intro,
+.methodology-summary,
+.methodology-box {
+    position: relative;
+    margin: 0 0 34px;
+    padding: 30px 24px 24px;
+    background: var(--panel);
+    border: 2px solid var(--line);
+    box-shadow: var(--shadow-raised);
+}
+
+.methodology-intro .methodology-label,
+.methodology-summary .section-label,
+.methodology-box-label {
+    position: absolute;
+    top: -12px;
+    left: 18px;
+    z-index: 2;
+    margin: 0;
+    padding: 3px 10px;
+    background: var(--blue-light);
+    border: 2px solid var(--line);
+    color: var(--purple-deep);
+    font-family: var(--font-pixel);
+    font-size: 0.68rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.methodology-intro h1,
+.methodology-intro h2,
+.methodology-summary h2 {
+    margin: 0 0 12px;
+}
+
+.methodology-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.methodology-summary h2 {
+    margin-bottom: 14px;
+}
+
+.methodology-summary ul,
+.methodology-box ul {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.methodology-summary li + li,
+.methodology-box li + li {
+    margin-top: 7px;
+}
+
+.methodology-sections {
+    display: block;
+}
+
+.methodology-box {
+    scroll-margin-top: 24px;
+}
+
+/* The real H2 remains in the document for accessibility and anchors.
+   Its visible title is supplied by the floating label. */
+.methodology-box > .methodology-box-heading {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.methodology-box > h3 {
+    margin-top: 24px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed var(--line);
+}
+
+.methodology-box > h3:first-of-type {
+    margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+    .methodology-intro,
+    .methodology-summary,
+    .methodology-box {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .methodology-intro .methodology-label,
+    .methodology-summary .section-label,
+    .methodology-box-label {
+        left: 10px;
+    }
+}
