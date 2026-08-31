@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="{{ '/assets/css/id-buttons.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/site-widgets.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/update-log.css' | relative_url }}">
-   {% if page.url contains '/affiliates/' or page.url contains '/links' %}
+   {% if page.url contains '/links' or page.url contains '/affiliates/' %}
 <link rel="stylesheet" href="{{ '/assets/css/affiliates.css' | relative_url }}">
-{% endif %}
-{% if page.url contains '/links' %}
 <link rel="stylesheet" href="{{ '/assets/css/links.css' | relative_url }}">
 {% endif %}
     {% if page.url contains '/methodology/' %}
